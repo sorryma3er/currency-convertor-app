@@ -5,16 +5,18 @@ class BaseCard extends StatelessWidget {
   final Color theColor;
   final Widget theChild;
   final VoidCallback? theOnTapFunc;
-  final double? theWidth;
-  final double? theHeight;
+  final double theWidth;
+  final double theHeight;
+  final bool hasBorder;
 
   const BaseCard({
     super.key,
     required this.theColor,
     required this.theChild,
+    required this.hasBorder,
+    required this.theWidth,
+    required this.theHeight,
     this.theOnTapFunc,
-    this.theWidth,
-    this.theHeight
   });
 
   @override
@@ -26,6 +28,7 @@ class BaseCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: theColor,
         borderRadius: BorderRadius.circular(25),
+        border: hasBorder ? Border.all(color: Colors.black, width: 3) : null,
         boxShadow: const [
           BoxShadow(
             color: Colors.black,

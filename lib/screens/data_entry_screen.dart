@@ -60,6 +60,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                 theColor: kPinkCardColor,
                 theWidth: double.infinity,
                 theHeight: 80,
+                hasBorder: true,
                 theChild: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -126,7 +127,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
               theColor: kPinkCardColor,
               theWidth: double.infinity,
               theHeight: 80,
-              theOnTapFunc: () {},
+              hasBorder: true,
               theChild: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -190,6 +191,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                 theColor: kButtonColor,
                 theWidth: double.infinity, // still infinity but use fractionally 0.5, so half
                 theHeight: 80,
+                hasBorder: false,
                 theOnTapFunc: () {
                   //TODO: navigate to next screen
                 },
