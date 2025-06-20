@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constraints.dart';
 import '../base_card.dart';
+import 'result_screen.dart';
 
 class DataEntryScreen extends StatefulWidget {
   const DataEntryScreen({super.key});
@@ -193,7 +194,19 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                 theHeight: 80,
                 hasBorder: false,
                 theOnTapFunc: () {
-                  //TODO: navigate to next screen
+                  final double rate1 = _rateToCNY[_currency1]!;
+                  final double rate2 = _rateToCNY[_currency2]!; // use ! to make double? into double
+                  final double ratio = rate1 / rate2;
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ResultScreen(
+                        currency1: _currency1,
+                        currency2: _currency2,
+                        ratio: ratio,
+                      ),
+                    ),
+                  );
                 },
                 theChild: const Center(
                   child: Text(
