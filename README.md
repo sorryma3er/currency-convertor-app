@@ -1,6 +1,8 @@
 # currency_convertor
 
-A new Flutter project.
+Project 1: Currency Converter
+
+A small Flutter project uses fixed rate to convert currency, no database and dynamically fetching rate info and refresh on a fixed frequency.
 
 ## Getting Started
 
