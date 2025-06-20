@@ -12,6 +12,14 @@ class ResultScreen extends StatelessWidget {
     'THB': 'th',
     'CNY': 'cn',
     'JPY': 'jp',
+    'TWD': 'tw',
+    'HKD': 'hk',
+    'EUR': 'eu',
+    'CAD': 'ca',
+    'MYR': 'my',
+    'GBP': 'gb',
+    'SGD': 'sg',
+    'AUD': 'au'
   };
 
   const ResultScreen({super.key, required this.currency1, required this.currency2, required this.ratio});

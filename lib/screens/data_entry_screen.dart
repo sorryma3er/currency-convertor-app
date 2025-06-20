@@ -13,12 +13,20 @@ class DataEntryScreen extends StatefulWidget {
 }
 
 class _DataEntryScreenState extends State<DataEntryScreen> {
-  final List<String> _currencies = ['USD', 'THB', 'CNY', 'JPY'];
+  final List<String> _currencies = ['USD', 'THB', 'CNY', 'JPY', 'TWD', 'HKD', 'EUR', 'CAD', 'MYR', 'GBP', 'SGD', 'AUD'];
   final Map<String, double> _rateToCNY = {
     'CNY': 1.0,
     'USD': 7.2,
     'THB': 0.22,
     'JPY': 0.05,
+    'TWD': 0.25,
+    'HKD': 0.92,
+    'EUR': 8.31,
+    'CAD': 5.27,
+    'MYR': 1.7,
+    'GBP': 9.72,
+    'SGD': 5.61,
+    'AUD': 4.68
   };
 
   String _currency1 = 'CNY';
