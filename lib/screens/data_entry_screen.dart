@@ -61,6 +61,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                 theWidth: double.infinity,
                 theHeight: 80,
                 theChild: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(Icons.circle_outlined),
                     // currency 1 drop down list
@@ -70,7 +71,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                           value: _currency1, // default value
                           decoration: const InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                           ),
                           items: _currencies.map((currency) => DropdownMenuItem(
                               value: currency,
@@ -101,7 +102,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                         decoration: const InputDecoration(
                           hintText: 'Amount',
                           border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal:12),
+                          contentPadding: EdgeInsets.symmetric(horizontal:12, vertical: 0),
                         ),
                         style: TextStyle(
                           color: kDarkTextColor,
@@ -127,6 +128,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
               theHeight: 80,
               theOnTapFunc: () {},
               theChild: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(Icons.circle_outlined),
                   // Currency 2 drop down list
@@ -135,6 +137,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                     child: DropdownButtonFormField<String>(
                       value: _currency2, // default val
                       decoration: const InputDecoration(
+                        border: InputBorder.none,
                         contentPadding: EdgeInsets.symmetric(horizontal:12),
                       ),
                       items: _currencies.map((currency) => DropdownMenuItem(
@@ -178,7 +181,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
               ),
             ),
 
-            SizedBox(height: 400,),
+            const Spacer(flex:2),
 
             // Show Rate Button Base Card
             FractionallySizedBox(
@@ -202,6 +205,8 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
                 ),
               ),
             ),
+
+            const Spacer(flex:1),
           ],
         ),
 
