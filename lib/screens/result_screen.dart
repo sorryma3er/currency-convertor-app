@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constraints.dart';
 import '../base_card.dart';
-import 'package:country_icons/country_icons.dart';
 
 class ResultScreen extends StatelessWidget {
   final String currency1;
