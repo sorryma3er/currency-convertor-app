@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import '../constraints.dart';
 import '../base_card.dart';
+import 'package:country_icons/country_icons.dart';
 
 class ResultScreen extends StatelessWidget {
   final String currency1;
   final String currency2;
   final double ratio;
+
+  static Map<String, String> _countryToIso = {
+    'USD': 'us',
+    'THB': 'th',
+    'CNY': 'cn',
+    'JPY': 'jp',
+  };
 
   const ResultScreen({super.key, required this.currency1, required this.currency2, required this.ratio});
 
@@ -18,7 +26,7 @@ class ResultScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kBackgroundColor,
         title: Text(
-          'Currency Convertor Result',
+          'Currency Converter Result',
           style: TextStyle(
             color: kDarkTextColor,
             fontSize: 20,
@@ -41,6 +49,13 @@ class ResultScreen extends StatelessWidget {
               theChild: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // left country flag
+                  Image.asset(
+                    'icons/flags/png100px/${_countryToIso[currency1]}.png',
+                    package: 'country_icons',
+                    width: 65,
+                  ),
+                  const SizedBox(width: 8),
                   Text(
                     currency1,
                     style: TextStyle(
@@ -66,6 +81,13 @@ class ResultScreen extends StatelessWidget {
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  const SizedBox(width: 8),
+                  // right country flag
+                  Image.asset(
+                    'icons/flags/png100px/${_countryToIso[currency2]}.png',
+                    package: 'country_icons',
+                    width: 65,
                   ),
                 ],
               ),

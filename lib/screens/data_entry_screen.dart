@@ -41,7 +41,7 @@ class _DataEntryScreenState extends State<DataEntryScreen> {
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
         title: Text(
-          'Currency Convertor',
+          'Currency Converter',
           style: TextStyle(
             color: kDarkTextColor,
             fontSize: 20,
